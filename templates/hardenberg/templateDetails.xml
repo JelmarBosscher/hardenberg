@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
+<install version="1.5" type="template">
+	<name>hardenberg</name>
+	<creationDate>26/05/13</creationDate>
+	<author>Jelmar Bosscher</author>
+	<authorEmail>info@jelmarbosscher.nl</authorEmail>
+	<authorUrl>http://jelmarbosscher.nl</authorUrl>
+	<copyright>Jelmar Bosscher</copyright>
+	<license></license>
+	<version>1.0</version>
+	<description>Template for PRO Hardenberg</description>
+	
+	<files>
+		<filename>component.php</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+		
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>includes</folder>
+	</files>
+	
+	<positions>
+		<position>mainMenu</position>
+		<position>featured</position>
+		<position>mainSideLeft</position>
+		<position>mainContent</position>
+		<position>columns</position>
+		<position>images</position>
+		<position>footerSide</position>
+		<position>footerMain</position>
+
+	<!-- Sidebar -->
+		<position>leftAgenda</position>
+		<position>leftMedia</position>
+		<position>leftNews</position>
+
+	<!-- Slider modules -->
+		<position>sliderFirst</position>
+		<position>sliderSecond</position>
+		<position>sliderThird</position>
+		<position>sliderFourth</position>
+		<position>sliderFifth</position>
+	</positions>
+	
+	<params>
+	
+	<param type="spacer" default="&lt;b&gt;Template Parameters&lt;/b&gt;" />
+	    
+
+        <param name="copyright" type="text" default="" label="Copyright" description="Enter Copyright Text" />
+        
+        <param type="spacer" default="&lt;b&gt;Feature Slider&lt;/b&gt;" />
+
+        <param name="image1" type="imagelist" default="" label="Select an image" description="Slide 1 Image" directory="/templates/hardenberg/images/slides/" exclude="" stripext="" />
+        <param name="caption1" type="text" default="" label="Caption" description="Enter Image Text" />
+
+        <param name="image2" type="imagelist" default="" label="Select an image" description="Slide 2 Image" directory="/templates/hardenberg/images/slides/" exclude="" stripext="" />
+        <param name="caption2" type="text" default="" label="Caption" description="Enter Image Text" />
+
+        <param name="image3" type="imagelist" default="" label="Select an image" description="Slide 3 Image" directory="/templates/hardenberg/images/slides/" exclude="" stripext="" />
+        <param name="caption3" type="text" default="" label="Caption" description="Enter Image Text" />
+
+        <param name="image4" type="imagelist" default="" label="Select an image" description="Slide 4 Image" directory="/templates/hardenberg/images/slides/" exclude="" stripext="" />
+        <param name="caption4" type="text" default="" label="Caption" description="Enter Image Text" />
+    
+	</params>
+	
+</install>
