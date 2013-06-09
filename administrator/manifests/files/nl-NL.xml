@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="1.6" type="file" client="site" method="upgrade">
+<name>Dutch</name>
+<tag>nl-NL</tag>
+<packagename>nl-NL JEvents</packagename>
+<version>3.0.13</version>
+<creationdate>2013.05.21</creationdate>
+<author>Wouter Franken - WoodyF4u</author>
+<authoremail>
+</authoremail>
+<authorurl>www.jevents.net</authorurl>
+<copyright>
+</copyright>
+<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+<description>Nederlandse taalbestanden voor Jevents 3.0</description>
+<fileset>
+<files folder="admin" target="administrator/language/nl-NL">
+	<filename>nl-NL.com_jevents.ini</filename>
+	<filename>nl-NL.com_jevents.menu.ini</filename>
+	<filename>nl-NL.com_jevents.sys.ini</filename>
+	<filename>nl-NL.plg_finder_jevents.ini</filename>
+	<filename>nl-NL.plg_finder_jevents.sys.ini</filename>
+	<filename>nl-NL.plg_search_eventsearch.ini</filename>
+</files>
+<files folder="site" target="language/nl-NL">
+	<filename>nl-NL.com_jevents.ini</filename>
+</files>
+</fileset>
+</extension>

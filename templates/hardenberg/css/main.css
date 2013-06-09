@@ -110,11 +110,11 @@ textarea {
    ========================================================================== */
 
    /* container grey */
-   header a.logo, header nav.mainMenu, .sideWidget, .items-leading > div, .items-row > .item, .item-page, .headerContainer, .footerContainer, .footerSide, .footerMain {
+    .mainContent .search, header a.logo, header nav.mainMenu, .sideWidget, .items-leading > div, .items-row > .item, .item-page, .headerContainer, .footerContainer, .footerSide, .footerMain {
         background-color: #f6f6f6;
    }
 
-   .slides img, .headerSliderCaption, .widgetTitle, .footerCol, .footerCol h1, .headerSlider, sliderCaptionCol{
+   .searchPosition .search input, header, .slides img, .headerSliderCaption, .widgetTitle, .footerCol, .footerCol h1, .headerSlider, sliderCaptionCol{
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
         border-radius: 4px;
@@ -129,7 +129,6 @@ textarea {
 div.wrapper {
     position: relative;
     width: 100%;
-    padding-top:5px;
 }
     /* width containers */
     div.main, header, footer {
@@ -141,15 +140,19 @@ div.wrapper {
             z-index: 999;
             border-left: 0;
             border-right: 0;
-            background: rgba(255,255,255,0.5) url('../images/patternBg.png') center center;
+            background: #f8f8f8;
+            border-bottom: 1px solid #e4e4e4;
         }
+            header{
+                border: 0;
+            }
             header a.logo{
                 display: block;
                 background-image: url('../images/prohardenberg-logo.png') ; 
                 background-repeat: no-repeat;
                 background-position: center center;
-                width:358px;
-                height:100px;
+                width:356px;
+                height:99px;
                 float: left;
                 border: 1px solid #e4e4e4;
                 border-top:0;
@@ -163,16 +166,28 @@ div.wrapper {
             }
             header .headerContent{
                 position: relative;
-                width: 100%;
+                float:left;
             }
+            header .searchPosition {
+                position: relative;
+                float: right;
+                padding: 10px 0;
+            }
+              header .searchPosition .search label{
+                display: none;
+              }
+              header .searchPosition .search input{
+                padding: 10px;
+                border:1px solid #ccc;
+              }
    /* slider */
 .headerSlider {
     position: relative;
-    min-height: 160px;
-    border-bottom: 1px solid #E4E4E4;
+
 }
 .headerSliderContent {
-    width: 100%;
+
+    overflow: hidden;
 }
     .headerSliderImages {
 
@@ -182,10 +197,8 @@ div.wrapper {
         }
     .headerSliderCaption {
         margin-top: -77px;
-        width: 960px;
-        left: 50%;
+        width: 100%;
         bottom: 0;
-        margin-left: -480px;
         position: absolute;
         min-height: 58px;
         background: rgba(255, 255, 255, 0.8);
@@ -213,7 +226,7 @@ div.wrapper {
             font-weight: bold;
             font-size: 4em;
             display: block;
-            margin-top:-230px;
+            margin-top:-170px;
             width: auto;
             color: #FECD08;
             text-shadow: 0 2px 10px rgba(0,0,0,0.5);
@@ -259,12 +272,107 @@ div.wrapper {
                     width: 30px;
                     height: 30px;
                 }
+            .slideSquarea{
+                position: absolute;
+                top:0;
+                left: -250px;
+                width: 500px;
+                height: 500px;
+                background: rgba(0,0,0,0.5);
+                -moz-transform:rotate(45deg);  
+                  -webkit-transform:rotate(45deg);  
+                  -o-transform:rotate(45deg);  
+                  -ms-transform:rotate(45deg); 
 
+                -webkit-border-radius: 10px;
+                -moz-border-radius:10px;
+                border-radius: 10px;
+            }
+/*agenda*/
 
+    .jeventpage table {
+        background: #f6f6f6;
+    }
+/*search*/
+
+        .mainContent .search {
+            position: relative;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #e4e4e4;
+            font-size: 0.8em;
+        }
+        .mainContent .search #searchForm{
+            border-bottom: 1px solid #e4e4e4;
+        }
+        .mainContent .search #searchForm .word {
+            margin-bottom:10px;
+        }
+        .mainContent .search #searchForm .word .inputbox{
+            padding: 8px; 
+        }
+        .mainContent .search #searchForm .word label{
+            font-size:1.2em;
+            padding: 5px 0; 
+        }
+        .mainContent .search #searchForm .word button{
+            text-decoration: none;
+            text-align: center;
+            background: #fecd08;
+            margin: 0;
+            border:0;
+            color: #FFF;
+            border-bottom: 1px solid #E1E1E1;
+            font-size: 1em;
+            padding: 10px 20px ;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            margin: 10px 20px 0 0;
+        }
+        #searchForm .phrases, #searchForm .searchintro, #searchForm .form-limit{
+            border-bottom: 1px solid #e4e4e4;
+            padding: 10px; 
+        }
+
+        #searchForm .phrases legend, #searchForm .only, #searchForm .counter, .search-results .result-category{
+            display: none;
+        }
+        .search-results .result-title{
+            margin-top:20px;
+        }
+        .search-results .result-title a{
+            color: #4cb848;
+            text-decoration: none;
+            font-size:1.6em;
+        }
+        .search-results span.highlight{
+            background: #fecd08
+        }
+        .search-results .result-text{
+            margin: 0;
+        }
+        .search-results .result-created{
+            font-size: 1em;
+            color: #6e6e6e;
+            margin: 0;
+            margin:5px 0;
+        }
+        #searchForm .phrases .phrases-box{
+            float: left;
+        }
+        #searchForm .phrases .ordering-box{
+            float: right;
+        }
+
+        .main {
+            background: white;
+        }
 /* navigation */
             header nav.mainMenu{
                 position: relative;
                 z-index: 999;
+                float: left;
             }
                 header nav.mainMenu  ul {
                     padding: 0; margin: 0;
@@ -273,6 +381,8 @@ div.wrapper {
                     border-bottom: 0;
                     list-style: none;
                     border-bottom: 1px solid #e4e4e4;
+                    border-right:0;
+                    border-left: 0;
                 }
                     header nav.mainMenu > ul > li{
                         text-align: center;
@@ -280,8 +390,8 @@ div.wrapper {
                         float:left;
                         border-right:1px solid #e4e4e4;
                         border-left:1px solid #fff;
-                    }   header nav.mainMenu > ul > li.active{
-                        font-weight: bold;
+                    }   header nav.mainMenu > ul > li.active > a{
+                        background: #fff;
                     }
                         header nav.mainMenu > ul > li  a{
                             position: relative;
@@ -290,7 +400,8 @@ div.wrapper {
                             background-color: #f7f7f7;
                             color: #404042;
                             text-decoration: none;
-                            padding: 30px 20px ;
+                            padding: 40px 20px ;
+
                          }   header nav.mainMenu ul > li:hover > a{
                             color: #000;
                             background-color:#fff;
@@ -330,6 +441,8 @@ div.wrapper {
                         header nav.mainMenu > ul > li > ul.subNav > li{
                             border-top: 1px solid #fff;
                             border-bottom: 1px solid #e4e4e4;
+                            border-right: 1px solid #e4e4e4;
+                            border-left: 1px solid #e4e4e4;
                         }
                         header nav.mainMenu > ul > li > ul.subNav > li a{
                             padding: 10px;
@@ -422,6 +535,40 @@ div.wrapper {
                     }
 
                     /* aSide > widget > agenda/events & News/articles*/
+
+
+                    .mod_events_latest_table {
+                        border: 1px solid #e4e4e4;
+                        border-color: #e4e4e4;  
+                        border-bottom: 0;
+                    }
+                        td.mod_events_latest_first, td.mod_events_latest{
+                            border: 0;
+                            background: 0;
+
+                            display: block;
+                            position: relative;
+                            padding: 15px 20px;
+                            text-decoration: none;
+                            color: #404042;
+                            font-size: 0.8em;
+                            border-top: 1px solid #fff;
+                            border-bottom: 1px solid #e4e4e4;
+                        } td.mod_events_latest_first:hover, td.mod_events_latest:hover{
+                            background: #fff;
+                        }
+                    .mod_events_latest_date {
+                        font-size: 1em;
+                        color: #aaa;
+                    }
+                    .mod_events_latest_content a{
+                        text-decoration: none;
+                        color: #333;
+                    }
+                         .mod_events_latest_content a:hover{
+                            color:#000;
+                         }
+
                     .mainSide .sideWidget.agenda .sideWidgetEvents, .mainSide .sideWidget.articles .newsFlashItem{
                         border-right:1px solid #e4e4e4;
                         border-left:1px solid #e4e4e4;
@@ -474,8 +621,15 @@ div.wrapper {
         width: 64%;
         
     }
-        .mainContentArticles {
-
+        .mainContentArticles .article{
+            
+        }
+        .mainContentArticles ol a{
+            color: #223e92;
+            text-decoration: none;
+        }   
+        .mainContentArticles ol a:hover{
+            color: #000;
         }
             .items-leading > div, 
             .items-row > .item,
@@ -518,6 +672,7 @@ div.wrapper {
                     margin:10px 20px 10px -20px;
                 }
                 .items-leading > div p, 
+                .items-leading > .item p,
                 .items-row > .item p{
                     line-height: 1.6em;
                     font-weight: normal;
@@ -535,7 +690,6 @@ div.wrapper {
                     }
         .pagination {
             text-align: center;
-            height: 80px;
         }
          .pagination ul, .pagenav {
                     list-style: none;
@@ -702,9 +856,8 @@ div.wrapper {
 .flexslider {margin: 0; padding: 0;}
 .flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides img {  display: block;
-    width: 120%;
-    margin-left: -10%;
-    height: 500px;
+    width: 100%;
+    height: 350px;
     background-position: center center;
     background-size: cover;
 
@@ -757,9 +910,8 @@ html[xmlns] .slides {display: block;}
 /* Control Nav */
 .flex-control-nav {
         position: absolute;
-        left: 50%;
+        right: 20px;
         bottom: 55px;
-        margin-left: -480px;
         text-indent: -999px;
         text-align: right;
         padding: 0 20px;
@@ -924,6 +1076,20 @@ html[xmlns] .slides {display: block;}
 @media only screen and (max-width: 960px) {
     /* Style adjustments for viewports that meet the condition */
 
+    header a.logo{
+        width: 100%;
+    }
+    header .headerContent{
+        width: 100%;
+    }
+
+    header nav.mainMenu {
+        width: 100%;
+    }
+    .cal_table {
+        font-size: 9px;
+    }
+
     nav .search{
         padding: 10px 0;
     }
@@ -946,18 +1112,21 @@ html[xmlns] .slides {display: block;}
             width: 100%;
             margin-left: 0;
         }
-    .sliderCaptionSlogan .slogan{
-        margin-top:-270px;
-    }
+
+        .headerSliderContent{
+            width: 100%;
+            margin-left: 0;
+        }
+
             .sliderCaptionCol:first-child{
             min-height: 58px;
             display: block;
             width: 80%;
         }
 
-            .sliderCaptionCol.sliderCaptionSlogan{
-        width: 100%;
-    }
+        .sliderCaptionCol.sliderCaptionSlogan{
+            width: 100%;
+        }
         .sliderCaptionCol{
             display: none;
         }
@@ -972,6 +1141,8 @@ html[xmlns] .slides {display: block;}
 
 @media only screen and (max-width: 640px) {
     /* Style adjustments for viewports that meet the condition */
+
+
 
     nav .search{
         position: relative;
@@ -1017,6 +1188,9 @@ html[xmlns] .slides {display: block;}
         .headerSliderCaption{
 
         }
+
+
+
             .sliderCaptionCol {
                 width: 99%;
                 margin-right: 0;
@@ -1041,16 +1215,10 @@ html[xmlns] .slides {display: block;}
                 margin:5px 0;
             }
              li.pagination-start, li.pagination-prev, li.pagination-next, li.pagination-end{
-                display: block;
-                width: 100%;
-                float:left;
-                margin: 0;
+
             }
             .pagination-start a, .pagination-prev a, .pagination-next a, .pagination-end a, .pagination ul > li > a.paginationButton, .pagination ul > li > a.paginationButton.paginationRight{
-                display: block;
-                width: 100%;
-                padding: 0;
-                margin: 0;
+                margin:0 3px ;
             }
             .footerSide, .footerMain {
                 width: 100%;
@@ -1062,7 +1230,6 @@ html[xmlns] .slides {display: block;}
             }
 
         .sliderCaptionSlogan .slogan{
-            margin-top:-270px;
             font-size: 3em;
         }
 

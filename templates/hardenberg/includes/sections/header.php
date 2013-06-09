@@ -21,9 +21,15 @@
                         </nav>
                         
                         <?php endif;?>
-                    </header>
-                </div>
 
+
+
+                    <div class="searchPosition searchTop">
+                         <jdoc:include type="modules" name="searchTop" style="xhtml" />
+                    </div>
+                    </header>
+
+                </div>
 
 
 

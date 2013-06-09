@@ -33,6 +33,7 @@
 		<position>images</position>
 		<position>footerSide</position>
 		<position>footerMain</position>
+		<position>searchTop</position>
 
 	<!-- Sidebar -->
 		<position>leftAgenda</position>
